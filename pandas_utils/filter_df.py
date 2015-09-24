@@ -27,7 +27,20 @@ def filter_by_string(df,col,filter_str):
     '''
     return df[df[col].str.contains(filter_str)]
 
+def filter_exact_match(df,col,match_val):
+    '''
+    Filter a column for exact match
+    either string or numeric.
+    :param df:
+    :param col:
+    :param match_val:
+    :return:
+    '''
+    return df[df[col] == match_val]
+
 if __name__ == '__main__':
     df = load_csv(sys.argv[1])
     #df2 = filter_by_string(df,'class','virginica')
     #df2 = filter_numeric_col_by_range(df,'sepal length',5.7,6.0)
+    #df2 = filter_exact_match(df,'petal width',2.5)
+    #df2 = filter_exact_match(df,'class','Iris-virginica')
