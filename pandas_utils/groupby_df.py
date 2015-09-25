@@ -1,11 +1,12 @@
 __author__ = 'Ed Cannon'
-
+#groupby multiple columns: grouped = df.groupby(['A', 'B'])
 import pandas as pd
 from filter_df import load_csv
 import sys
 
 def groupby_single_column(df,col,oper):
     '''
+    aggregation functions available: mean, sum, size, count, std, var, sem, describe, first, last, nth, min, max
 
     :param df: input data frame
     :param col: column to group by
