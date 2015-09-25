@@ -27,4 +27,4 @@ def groupby_single_column(df,col,oper):
 
 if __name__ == '__main__':
     df = load_csv(sys.argv[1])
-    groupby_single_column(df,'class')
+    print groupby_single_column(df,'class','mean')
